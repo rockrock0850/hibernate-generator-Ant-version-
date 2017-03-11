@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ==================================================== -->
+<!--      Build file for IbatorGenerator                  -->
+<!--      build.xml, 2011-04-19                           -->
+<!-- ==================================================== -->
+
+<project name="HibernateGenerator" default="all" basedir=".">
+
+	<property file="build.env.properties" />
+
+	<path id="classpath">
+		<fileset dir="${dir.lib}">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+
+	<tstamp>
+		<format property="datestamp" pattern="yyyyMMdd" />
+		<format property="timestamp" pattern="yyyy/MM/dd HH:mm" />
+	</tstamp>
+
+	<target name="all">
+		<antcall target="workspace" />
+		<antcall target="genHibernateFiles" />
+	</target>
+
+	<target name="clean">
+		<delete dir="${dir.src}/java" />
+	</target>
+
+	<target name="workspace" depends="clean">
+		<mkdir dir="${dir.src}/java" />
+	</target>
+
+	<target name="genHibernateFiles" description="Generate the Hibernate files" depends="workspace">
+		<taskdef name="hTool" 
+				 classname="org.hibernate.tool.ant.HibernateToolTask" 
+				 classpathref="classpath" />
+		<hTool destdir="${dir.src}/java" >
+			<jdbcconfiguration configurationfile="resource/hibernate.cfg.xml"
+				               packagename="${build.model.package}"
+				               revengfile="resource/hibernate.reveng.xml"
+						       detectoptimisticlock="true" />
+			
+			<hbm2java jdk5="true" ejb3="true" />
+		</hTool>
+	</target>
+
+</project>
