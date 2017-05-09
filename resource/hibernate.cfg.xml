@@ -4,10 +4,10 @@
 		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
-        <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
-        <property name="hibernate.connection.url">jdbc:sqlserver://118.163.86.162:1433;DatabaseName=SOAPORTAL;selectMethod=cursor</property>
-        <property name="hibernate.connection.username">soaportaluser</property>
-        <property name="hibernate.connection.password">soaportal1234</property>
-        <property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
+        <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+        <property name="hibernate.connection.url">jdbc:oracle:thin:@118.163.86.162:1521/XE</property>
+        <property name="hibernate.connection.username">OSP</property>
+        <property name="hibernate.connection.password">OSPUSER</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
     </session-factory>
 </hibernate-configuration>
