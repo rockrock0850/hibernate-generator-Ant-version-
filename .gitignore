@@ -13,3 +13,5 @@ src/.gitignore
 bin/
 
 target/
+
+src/
