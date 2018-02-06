@@ -5,9 +5,9 @@
 <hibernate-configuration>
     <session-factory>
         <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
-        <property name="hibernate.connection.url">jdbc:postgresql://192.168.2.3:33306/HR_TEST</property>
-        <property name="hibernate.connection.username">HR</property>
-        <property name="hibernate.connection.password">elitech_hr</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://192.168.2.3:33306/elitech</property>
+        <property name="hibernate.connection.username">elitech</property>
+        <property name="hibernate.connection.password">elitech6875</property>
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
     </session-factory>
 </hibernate-configuration>
