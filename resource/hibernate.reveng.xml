@@ -2,6 +2,12 @@
 <!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
 
 <hibernate-reverse-engineering>
+<type-mapping>
+	<sql-type jdbc-type="NVARCHAR" hibernate-type="java.lang.String" />
+</type-mapping>
 <!-- 	<table-filter match-name='.*' /> -->
-	<table-filter match-name='location' />
+	<table-filter match-name='FORM' />
+	<table-filter match-name='FORM_INFO_USER' />
+	<table-filter match-name='FORM_INFO_DATE' />
+	<table-filter match-name='FORM_INFO_SR_DETAIL' />
 </hibernate-reverse-engineering>
