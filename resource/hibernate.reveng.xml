@@ -3,8 +3,9 @@
 
 <hibernate-reverse-engineering>
 <type-mapping>
-	<sql-type jdbc-type="NVARCHAR" hibernate-type="java.lang.String" />
 	<sql-type jdbc-type="CHAR" hibernate-type="java.lang.String" />
+	<sql-type jdbc-type="CLOB" hibernate-type="java.lang.String" />
+	<sql-type jdbc-type="NVARCHAR" hibernate-type="java.lang.String" />
 	<sql-type jdbc-type="BIGINT" hibernate-type="java.lang.Long" />
 </type-mapping>
 <!-- 	<table-filter match-name='.*' /> -->
@@ -19,6 +20,6 @@
 <!-- 	<table-filter match-name='FORM_JOB_INFO_SYS_DETAIL' /> -->
 <!-- 	<table-filter match-name='FORM_JOB_INFO_WORKING_ITEMS' /> -->
 <!-- 	<table-filter match-name='FORM_JOB_LIBRARY' /> -->
-	<table-filter match-name='FORM_JOB_LIBRARY_FILE' />
 <!-- 	<table-filter match-name='FORM_JOB_WORKING' /> -->
+	<table-filter match-name='AUDIT_NOTIFY_PARAMS' />
 </hibernate-reverse-engineering>
